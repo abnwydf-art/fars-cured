@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="curd.css" />
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h2>CRUD</h2>
+        <p>product Mangement</p>
+      </div>
+      <div class="input">
+        <input placeholder="title" type="text" id="title" />
+        <div class="price">
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="price"
+            placeholder="price"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="taxes"
+            placeholder="taxes"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="ads"
+            placeholder="ads"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="dis"
+            placeholder="dis"
+          />
+          <small id="total"></small>
+        </div>
+        <input placeholder="count" type="number" id="count" />
+        <input placeholder="catg" type="text" id="catg" />
+        <button id="sub">create</button>
+      </div>
+      <div class="outputs">
+        <div class="se">
+          <input type="text" id="ser" placeholder="ser" />
+          <div class="btns">
+            <button id="sert">serch By title</button>
+            <button id="categ">serch By category</button>
+          </div>
+          <div id="deleteall"></div>
+          <table>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>category</th>
+              <th>update</th>
+              <th>delete</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="curd.js"></script>
+  </body>
+</html>
